@@ -264,10 +264,15 @@
      margin: auto;
  }
 
+ .canvas-container-p {
+    
+    text-align: center;
+}
+
  .canvas-container {
-     /* display: flex; */
-     /* flex-wrap: wrap; */
-     /* gap: 16px; */
+     display: flex;
+     flex-wrap: wrap;
+     gap: 16px;
      justify-content: center;
      align-items: center;
  }
