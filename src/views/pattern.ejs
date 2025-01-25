@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= patternType %> Pattern
+    </title>
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="/js/p5.min.js"></script>
+
+    <script defer src="/js/main.js"></script>
+
+
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-identity  ">
+          <img src="/style/icon.svg" width="40px" alt="">
+          <h1><a href="/">Mathematical Patterns</a></h1>
+        </div>  
+        
+      </header>
+    <div class="container">
+        
+        <div class="row">
+             
+            <div class="col-md-4 box">
+                <!-- editing controls the canvas -->
+                <label for="densitySlider">Density</label>
+                <input type="range" id="densitySlider" min="1" max="10" step="1" value="8" class="mb-4">
+
+                <label for="strokeSlider">Stroke</label>
+                <input type="range" id="strokeWeight" min="1" max="10" step="1" value="2" class="mb-4">
+
+                <label for="zoomSlider">Zoom:</label>
+                <input type="range" id="zoomSlider" min="0.5" max="3" step="0.01" value="1">
+
+                <label for="angleSlider">Angle:</label>
+                <input type="range" id="angleSlider" min="0" max="360" value="0">
+                <div class="color-box-container"  >
+                    <div class="color-box">
+
+
+                        <label for="colorPicker">  Color</label>
+                        <div class="color-picker-container">
+                            <input type="color" id="colorPicker" class="w-12 h-12" value="#ecc94b">
+
+                        </div>
+                    </div>
+                        <div class="color-box">
+                        <label for="colorPicker">  Color</label>
+                        <div class="color-picker-container">
+                            <input type="color" id="colorPickerSe" class="w-12 h-12" value="#48bb78">
+
+                        </div>
+                    </div>
+                    <div class="color-box">
+                    <label for="colorPicker">  Background</label>
+                    <div class="color-picker-container">
+                        <input type="color" id="bgcolorPicker" class="w-12 h-12" value="#2b2b31">
+                        
+                    </div></div>
+                </div>
+
+
+                <label for="canvasWidth">Canvas Width (px)</label>
+                <input type="number" id="canvasWidth" value="500" min="100" max="5000" class="mb-4">
+
+                <label for="canvasHeight">Canvas Height (px)</label>
+                <input type="number" id="canvasHeight" value="500" min="100" max="5000" class="mb-4">
+
+                <label for="imageFormatSelect">Choose Image Format</label>
+                <select id="imageFormatSelect" class="mb-4">
+                    <option value="png">PNG</option>
+                    <option value="jpeg">JPEG</option>
+                    <option value="webp">WebP</option>
+                </select>
+
+                <div class="button-group">
+                    <button id="generateBtn">Generate Pattern</button>
+                    <button id="exportBtn">Download Pattern</button>
+                </div>
+            </div>
+
+            <!--   displaying the canvas  -->
+            <div class="col-md-8 box">
+                <div class="canvas-container">
+                    <h1 id="patternType">
+                        <%= patternType %> Pattern
+                    </h1>
+                    <div id="canvas-wrapper" class="canvas-wrapper full-width"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
